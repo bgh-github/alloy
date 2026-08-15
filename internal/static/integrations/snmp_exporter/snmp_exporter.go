@@ -79,7 +79,7 @@ func init() {
 
 // New creates a new snmp_exporter integration
 func New(log *slog.Logger, c *Config) (integrations.Integration, error) {
-	snmpCfg, err := LoadSNMPConfig(c.SnmpConfigFile, &c.SnmpConfig, c.SnmpConfigMergeStrategy)
+	snmpCfg, err := LoadSNMPConfig(log, c.SnmpConfigFile, &c.SnmpConfig, c.SnmpConfigMergeStrategy)
 	if err != nil {
 		return nil, err
 	}
@@ -105,10 +105,10 @@ func New(log *slog.Logger, c *Config) (integrations.Integration, error) {
 
 // LoadSNMPConfig loads the SNMP configuration from the given file. If the file is empty, it will
 // load the embedded configuration.
-func LoadSNMPConfig(snmpConfigFile string, customSnmpCfg *snmp_config.Config, strategy string) (*snmp_config.Config, error) {
+func LoadSNMPConfig(log *slog.Logger, snmpConfigFile string, customSnmpCfg *snmp_config.Config, strategy string) (*snmp_config.Config, error) {
 	var err error
 	if snmpConfigFile != "" {
-		customSnmpCfg, err = snmp_config.LoadFile([]string{snmpConfigFile}, false)
+		customSnmpCfg, err = snmp_config.LoadFile(log, []string{snmpConfigFile}, false)
 		if err != nil {
 			return nil, fmt.Errorf("failed to load snmp config from file %v: %w", snmpConfigFile, err)
 		}
