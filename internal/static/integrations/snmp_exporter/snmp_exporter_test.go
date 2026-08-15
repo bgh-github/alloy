@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-const embeddedModulesCount = 49
+const embeddedModulesCount = 49 // CHECK
 const embeddedAuthCount = 2
 
 // TestLoadSNMPConfig tests the LoadSNMPConfig function covers all the cases.

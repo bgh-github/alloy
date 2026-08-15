@@ -208,7 +208,7 @@ require (
 	github.com/prometheus/procfs v0.21.1
 	github.com/prometheus/prometheus v0.313.2
 	github.com/prometheus/sigv4 v0.4.1
-	github.com/prometheus/snmp_exporter v0.29.0 // if you update the snmp_exporter version, make sure to update the SNMP_VERSION in _index
+	github.com/prometheus/snmp_exporter v0.30.1 // if you update the snmp_exporter version, make sure to update the SNMP_VERSION in _index
 	github.com/prometheus/statsd_exporter v0.28.0
 	github.com/richardartoul/molecule v1.0.1-0.20240531184615-7ca0df43c0b3
 	github.com/rogpeppe/go-internal v1.15.0

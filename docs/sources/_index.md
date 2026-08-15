@@ -7,7 +7,7 @@ cascade:
   ALLOY_RELEASE: v1.18.0 # x-release-please-version
   OTEL_VERSION: v0.158.0
   PROM_WIN_EXP_VERSION: v0.31.3
-  SNMP_VERSION: v0.29.0
+  SNMP_VERSION: v0.30.1
   BEYLA_VERSION: v3.28.0
   FULL_PRODUCT_NAME: Grafana Alloy
   PRODUCT_NAME: Alloy
